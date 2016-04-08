@@ -66,7 +66,7 @@ namespace PlayNextSong
                 var namePauseProperty = new PropertyCondition(AutomationElement.NameProperty, "Pause");
 
                 var frameworkIdProperty = new PropertyCondition(AutomationElement.FrameworkIdProperty, "InternetExplorer");
-                var controlTypeProperty = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button);
+                var controlTypeProperty = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Hyperlink);
                 var hasInvokePatter = new PropertyCondition(AutomationElement.IsInvokePatternAvailableProperty, true);
 
                 var condition = new AndCondition(controlTypeProperty, hasInvokePatter, frameworkIdProperty, new OrCondition(namePlayProperty, namePauseProperty));
